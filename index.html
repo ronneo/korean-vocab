@@ -869,7 +869,10 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
                 </div>
                 <p class="text-xs text-indigo-100">Practice current filtered words in dynamic interactive flashcard study decks.</p>
                 <button id="start-quiz-btn" class="w-full py-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-lg shadow text-xs transition flex items-center justify-center gap-2">
-                    <i class="fas fa-play text-[10px]"></i> Launch Flashcard Deck
+                    <i class="fas fa-play text-[10px]"></i> Continue Learning
+                </button>
+                <button id="review-learned-btn" class="w-full py-2 bg-indigo-800 hover:bg-indigo-700 text-white font-bold rounded-lg border border-indigo-500/30 text-xs transition flex items-center justify-center gap-2">
+                    <i class="fas fa-rotate-left text-[10px]"></i> Revise Learned Words
                 </button>
             </div>
         </aside>
@@ -1719,6 +1722,7 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
         // Application State
         let learnedState = new Set(JSON.parse(localStorage.getItem('topik_1000_learned') || '[]'));
         let starredState = new Set(JSON.parse(localStorage.getItem('topik_1000_starred') || '[]'));
+        let learningDb = JSON.parse(localStorage.getItem('topik_1000_learning_db') || '{}');
         let activeCategory = "All";
         let showRomanization = true;
         let currentPage = 1;
@@ -1733,6 +1737,7 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
 
         // DOM Loaded Init
         document.addEventListener('DOMContentLoaded', () => {
+            syncLearningDbFromSavedProgress();
             renderCategoryNav();
             renderVocabList();
             updateOverallProgress();
@@ -1757,6 +1762,7 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
 
             // Quiz Modal Events
             document.getElementById('start-quiz-btn').addEventListener('click', startQuizDeck);
+            document.getElementById('review-learned-btn').addEventListener('click', startLearnedReviewDeck);
             document.getElementById('close-quiz-btn').addEventListener('click', closeQuizModal);
             document.getElementById('flashcard').addEventListener('click', flipCard);
             document.getElementById('quiz-pass-btn').addEventListener('click', handleQuizPass);
@@ -1888,14 +1894,55 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
             return str.replace(/'/g, "\\'").replace(/"/g, '\\"');
         }
 
+        function saveLearningProgress() {
+            localStorage.setItem('topik_1000_learned', JSON.stringify([...learnedState]));
+            localStorage.setItem('topik_1000_learning_db', JSON.stringify(learningDb));
+        }
+
+        function syncLearningDbFromSavedProgress() {
+            let changed = false;
+            learnedState.forEach(id => {
+                if (!learningDb[id]) {
+                    learningDb[id] = {
+                        learnedAt: new Date().toISOString(),
+                        correctCount: 1,
+                        reviewCount: 0
+                    };
+                    changed = true;
+                }
+            });
+            if (changed) saveLearningProgress();
+        }
+
+        function markWordLearned(item, source = 'manual') {
+            const id = item.id;
+            const wasLearned = learnedState.has(id);
+            learnedState.add(id);
+            learningDb[id] = {
+                learnedAt: learningDb[id]?.learnedAt || new Date().toISOString(),
+                lastPracticedAt: new Date().toISOString(),
+                correctCount: (learningDb[id]?.correctCount || 0) + 1,
+                reviewCount: (learningDb[id]?.reviewCount || 0) + (wasLearned ? 1 : 0),
+                source
+            };
+            saveLearningProgress();
+            updateOverallProgress();
+            renderVocabList();
+        }
+
         // Toggle Word Learned State
         function toggleLearned(id) {
             if (learnedState.has(id)) {
                 learnedState.delete(id);
+                delete learningDb[id];
             } else {
-                learnedState.add(id);
+                const item = vocabDatabase.find(word => word.id === id);
+                if (item) {
+                    markWordLearned(item, 'manual');
+                    return;
+                }
             }
-            localStorage.setItem('topik_1000_learned', JSON.stringify([...learnedState]));
+            saveLearningProgress();
             updateOverallProgress();
             renderVocabList();
         }
@@ -1927,7 +1974,9 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
                 learnedState.clear();
                 starredState.clear();
                 localStorage.removeItem('topik_1000_learned');
+                localStorage.removeItem('topik_1000_learning_db');
                 localStorage.removeItem('topik_1000_starred');
+                learningDb = {};
                 updateOverallProgress();
                 renderVocabList();
             }
@@ -1952,13 +2001,29 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
 
         // --- FLASHCARD QUIZ ENGINE ---
         function startQuizDeck() {
-            quizDeck = getFilteredWords();
+            quizDeck = getFilteredWords().filter(item => !learnedState.has(item.id));
             if (quizDeck.length === 0) {
-                alert("No words match current filter to launch quiz deck!");
+                alert("No unlearned words match the current filter. Use Revise Learned Words to review mastered vocabulary.");
                 return;
             }
-            // Shuffle deck
-            quizDeck = [...quizDeck].sort(() => Math.random() - 0.5);
+            launchQuizDeck(quizDeck);
+        }
+
+        function startLearnedReviewDeck() {
+            quizDeck = getFilteredWords().filter(item => learnedState.has(item.id));
+            if (quizDeck.length === 0) {
+                alert("No learned words match the current filter yet.");
+                return;
+            }
+            launchQuizDeck(quizDeck);
+        }
+
+        function launchQuizDeck(deck) {
+            quizDeck = [...deck].sort((a, b) => {
+                const aTime = learningDb[a.id]?.lastPracticedAt || learningDb[a.id]?.learnedAt || '';
+                const bTime = learningDb[b.id]?.lastPracticedAt || learningDb[b.id]?.learnedAt || '';
+                return aTime.localeCompare(bTime) || Math.random() - 0.5;
+            });
             quizIndex = 0;
             quizMode = 'english';
             document.getElementById('quiz-modal').classList.remove('hidden');
@@ -2050,12 +2115,7 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
             if (answer === expected && !answerRevealed) {
                 feedback.textContent = 'Correct. Marked as mastered.';
                 feedback.className = 'min-h-[1.25rem] text-center text-sm font-bold text-emerald-600';
-                if (!learnedState.has(current.id)) {
-                    learnedState.add(current.id);
-                    localStorage.setItem('topik_1000_learned', JSON.stringify([...learnedState]));
-                    updateOverallProgress();
-                    renderVocabList();
-                }
+                markWordLearned(current, learnedState.has(current.id) ? 'review' : 'typed');
                 setTimeout(nextCard, 700);
             } else if (answer === expected) {
                 feedback.textContent = 'Answer revealed. Move to the next word when ready.';
@@ -2080,9 +2140,7 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
 
         function handleQuizPass() {
             const current = quizDeck[quizIndex];
-            if (!learnedState.has(current.id)) {
-                toggleLearned(current.id);
-            }
+            markWordLearned(current, learnedState.has(current.id) ? 'review' : 'flashcard');
             nextCard();
         }
 
