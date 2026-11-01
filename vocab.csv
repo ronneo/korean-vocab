@@ -1,0 +1,1001 @@
+id,kr,rom,en,cat
+1,집,jip,House / Home,Daily Life & House
+2,방,bang,Room,Daily Life & House
+3,문,mun,Door,Daily Life & House
+4,창문,chang-mun,Window,Daily Life & House
+5,침대,chim-dae,Bed,Daily Life & House
+6,책상,chaek-sang,Desk,Daily Life & House
+7,의자,ui-ja,Chair,Daily Life & House
+8,옷장,ot-jang,Wardrobe / Closet,Daily Life & House
+9,냉장고,naeng-jang-go,Refrigerator,Daily Life & House
+10,세탁기,se-tak-gi,Washing machine,Daily Life & House
+11,시계,si-gye,Clock / Watch,Daily Life & House
+12,거울,geo-ul,Mirror,Daily Life & House
+13,수건,su-geon,Towel,Daily Life & House
+14,비누,bi-nu,Soap,Daily Life & House
+15,치약,chi-yak,Toothpaste,Daily Life & House
+16,칫솔,chit-sol,Toothbrush,Daily Life & House
+17,휴지,hyu-ji,Tissue / Toilet paper,Daily Life & House
+18,열쇠,yeol-ssoe,Key,Daily Life & House
+19,우산,u-san,Umbrella,Daily Life & House
+20,안경,an-gyeong,Glasses,Daily Life & House
+21,소파,so-pa,Sofa,Daily Life & House
+22,탁자,tak-ja,Table,Daily Life & House
+23,불,bul,Light / Fire,Daily Life & House
+24,전등,jeon-deung,Electric lamp,Daily Life & House
+25,청소기,cheong-so-gi,Vacuum cleaner,Daily Life & House
+26,화장실,hwa-jang-sil,Restroom / Bathroom,Daily Life & House
+27,부엌,bu-eok,Kitchen,Daily Life & House
+28,거실,geo-sil,Living room,Daily Life & House
+29,베란다,be-ran-da,Balcony,Daily Life & House
+30,마당,ma-dang,Yard / Garden,Daily Life & House
+31,이불,i-bul,Blanket / Quilt,Daily Life & House
+32,베개,be-gae,Pillow,Daily Life & House
+33,빗,bit,Comb,Daily Life & House
+34,드라이기,deu-ra-i-gi,Hair dryer,Daily Life & House
+35,쓰레기통,sseu-re-gi-tong,Trash can,Daily Life & House
+36,수저,su-jeo,Spoon and chopsticks,Daily Life & House
+37,숟가락,sut-ga-rak,Spoon,Daily Life & House
+38,젓가락,jeot-ga-rak,Chopsticks,Daily Life & House
+39,접시,jeop-si,Plate / Dish,Daily Life & House
+40,컵,keop,Cup / Glass,Daily Life & House
+41,냄비,naem-bi,Pot,Daily Life & House
+42,프라이팬,peu-ra-i-paen,Frying pan,Daily Life & House
+43,가위,ga-wi,Scissors,Daily Life & House
+44,칼,kal,Knife,Daily Life & House
+45,전자레인지,jeon-ja-re-in-ji,Microwave,Daily Life & House
+46,에어컨,e-eo-keon,Air conditioner,Daily Life & House
+47,선풍기,seon-pung-gi,Electric fan,Daily Life & House
+48,난로,nal-ro,Heater,Daily Life & House
+49,콘센트,kon-sen-teu,Electrical outlet,Daily Life & House
+50,충전기,chung-jeon-gi,Charger,Daily Life & House
+51,가다,ga-da,To go,Verbs (Actions)
+52,오다,o-da,To come,Verbs (Actions)
+53,먹다,meok-da,To eat,Verbs (Actions)
+54,마시다,ma-si-da,To drink,Verbs (Actions)
+55,보다,bo-da,To see / watch,Verbs (Actions)
+56,듣다,deut-da,To listen,Verbs (Actions)
+57,읽다,ik-da,To read,Verbs (Actions)
+58,쓰다,sseu-da,To write,Verbs (Actions)
+59,말하다,mal-ha-da,To speak,Verbs (Actions)
+60,공부하다,gong-bu-ha-da,To study,Verbs (Actions)
+61,일하다,il-ha-da,To work,Verbs (Actions)
+62,쉬다,swi-da,To rest,Verbs (Actions)
+63,자다,ja-da,To sleep,Verbs (Actions)
+64,일어나다,i-reo-na-da,To wake up,Verbs (Actions)
+65,살다,sal-da,To live,Verbs (Actions)
+66,사다,sa-da,To buy,Verbs (Actions)
+67,팔다,pal-da,To sell,Verbs (Actions)
+68,만나다,man-na-da,To meet,Verbs (Actions)
+69,기다리다,gi-da-ri-da,To wait,Verbs (Actions)
+70,가르치다,ga-reu-chi-da,To teach,Verbs (Actions)
+71,배우다,bae-u-da,To learn,Verbs (Actions)
+72,웃다,ut-da,To laugh,Verbs (Actions)
+73,울다,ul-da,To cry,Verbs (Actions)
+74,걷다,geot-da,To walk,Verbs (Actions)
+75,뛰다,ttwi-da,To run,Verbs (Actions)
+76,타다,ta-da,To ride,Verbs (Actions)
+77,내리다,nae-ri-da,To get off,Verbs (Actions)
+78,입다,ip-da,To wear (clothes),Verbs (Actions)
+79,신다,sin-da,To wear (shoes),Verbs (Actions)
+80,벗다,beot-da,To take off,Verbs (Actions)
+81,씻다,ssit-da,To wash,Verbs (Actions)
+82,청소하다,cheong-so-ha-da,To clean,Verbs (Actions)
+83,요리하다,yo-ri-ha-da,To cook,Verbs (Actions)
+84,전화하다,jeon-hwa-ha-da,To make a call,Verbs (Actions)
+85,수영하다,su-yeong-ha-da,To swim,Verbs (Actions)
+86,노래하다,no-rae-ha-da,To sing,Verbs (Actions)
+87,춤추다,chum-chu-da,To dance,Verbs (Actions)
+88,생각하다,saeng-gak-ha-da,To think,Verbs (Actions)
+89,알다,al-da,To know,Verbs (Actions)
+90,모르다,mo-reu-da,To not know,Verbs (Actions)
+91,돕다,dop-da,To help,Verbs (Actions)
+92,보내다,bo-nae-da,To send,Verbs (Actions)
+93,받다,bat-da,To receive,Verbs (Actions)
+94,주다,ju-da,To give,Verbs (Actions)
+95,찾다,chat-da,To search / find,Verbs (Actions)
+96,잃어버리다,ir-eo-beori-da,To lose,Verbs (Actions)
+97,시작하다,si-jak-ha-da,To start,Verbs (Actions)
+98,끝나다,kkeun-na-da,To finish,Verbs (Actions)
+99,열다,yeol-da,To open,Verbs (Actions)
+100,닫다,dat-da,To close,Verbs (Actions)
+101,크다,keu-da,To be big,Adjectives (States)
+102,작다,jak-da,To be small,Adjectives (States)
+103,많다,man-ta,To be many/much,Adjectives (States)
+104,적다,jeok-da,To be few/little,Adjectives (States)
+105,좋다,jo-ta,To be good,Adjectives (States)
+106,나쁘다,na-ppeu-da,To be bad,Adjectives (States)
+107,싸다,ssa-da,To be cheap,Adjectives (States)
+108,비싸다,bi-ssa-da,To be expensive,Adjectives (States)
+109,재미있다,jae-mi-it-da,To be interesting,Adjectives (States)
+110,재미없다,jae-mi-eop-da,To be uninteresting,Adjectives (States)
+111,어렵다,eo-ryeop-da,To be difficult,Adjectives (States)
+112,쉽다,swip-da,To be easy,Adjectives (States)
+113,바쁘다,ba-ppeu-da,To be busy,Adjectives (States)
+114,한가하다,han-ga-ha-da,To be free (time),Adjectives (States)
+115,덥다,deop-da,To be hot,Adjectives (States)
+116,춥다,chup-da,To be cold,Adjectives (States)
+117,시원하다,si-won-ha-da,To be cool/refreshing,Adjectives (States)
+118,따뜻하다,tta-tteut-ha-da,To be warm,Adjectives (States)
+119,빠르다,ppa-reu-da,To be fast,Adjectives (States)
+120,느리다,neuk-ri-da,To be slow,Adjectives (States)
+121,무겁다,mu-geop-da,To be heavy,Adjectives (States)
+122,가볍다,ga-byeop-da,To be light,Adjectives (States)
+123,넓다,neol-da,To be spacious/wide,Adjectives (States)
+124,좁다,jop-da,To be narrow,Adjectives (States)
+125,조용하다,jo-yong-ha-da,To be quiet,Adjectives (States)
+126,시끄럽다,si-kkeu-reop-da,To be noisy,Adjectives (States)
+127,기쁘다,gi-ppeu-da,To be glad,Adjectives (States)
+128,슬프다,seul-peu-da,To be sad,Adjectives (States)
+129,피곤하다,pi-gon-ha-da,To be tired,Adjectives (States)
+130,아프다,a-peu-da,To be sick/painful,Adjectives (States)
+131,밥,bap,Rice / Meal,Food & Dining
+132,김치,gim-chi,Kimchi,Food & Dining
+133,물,mul,Water,Food & Dining
+134,고기,go-gi,Meat,Food & Dining
+135,사과,sa-gwa,Apple,Food & Dining
+136,바나나,ba-na-na,Banana,Food & Dining
+137,빵,ppang,Bread,Food & Dining
+138,우유,u-yu,Milk,Food & Dining
+139,커피,keo-pi,Coffee,Food & Dining
+140,차,cha,Tea,Food & Dining
+141,주스,ju-seu,Juice,Food & Dining
+142,라면,ra-myeon,Ramen,Food & Dining
+143,불고기,bul-go-gi,Bulgogi,Food & Dining
+144,비빔밥,bi-bim-bap,Bibimbap,Food & Dining
+145,냉면,naeng-myeon,Cold noodles,Food & Dining
+146,계란,gye-ran,Egg,Food & Dining
+147,생선,saeng-seon,Fish,Food & Dining
+148,채소,chae-so,Vegetable,Food & Dining
+149,과일,gwa-il,Fruit,Food & Dining
+150,설탕,seol-tang,Sugar,Food & Dining
+151,소금,so-geum,Salt,Food & Dining
+152,오늘,o-neul,Today,Time & Numbers
+153,내일,nae-il,Tomorrow,Time & Numbers
+154,어제,eo-je,Yesterday,Time & Numbers
+155,지금,ji-geum,Now,Time & Numbers
+156,요즘,yo-jeum,These days,Time & Numbers
+157,아침,a-chim,Morning / Breakfast,Time & Numbers
+158,점심,jeom-sim,Lunch / Afternoon,Time & Numbers
+159,저녁,jeo-nyeok,Evening / Dinner,Time & Numbers
+160,밤,bam,Night,Time & Numbers
+161,주말,ju-mal,Weekend,Time & Numbers
+162,일주일,il-ju-il,One week,Time & Numbers
+163,한 달,han-dal,One month,Time & Numbers
+164,일년,il-nyeon,One year,Time & Numbers
+165,월요일,wor-yo-il,Monday,Time & Numbers
+166,화요일,hwa-yo-il,Tuesday,Time & Numbers
+167,수요일,su-yo-il,Wednesday,Time & Numbers
+168,목요일,mong-nyo-il,Thursday,Time & Numbers
+169,금요일,geum-yo-il,Friday,Time & Numbers
+170,토요일,to-yo-il,Saturday,Time & Numbers
+171,일요일,ir-yo-il,Sunday,Time & Numbers
+172,하나,ha-na,One (Native),Time & Numbers
+173,둘,dul,Two (Native),Time & Numbers
+174,셋,set,Three (Native),Time & Numbers
+175,일,il,One (Sino),Time & Numbers
+176,이,i,Two (Sino),Time & Numbers
+177,학교,hak-gyo,School,Places & Transportation
+178,회사,hoi-sa,Company,Places & Transportation
+179,식당,sik-dang,Restaurant,Places & Transportation
+180,병원,byeong-won,Hospital,Places & Transportation
+181,약국,yak-guk,Pharmacy,Places & Transportation
+182,은행,eun-haeng,Bank,Places & Transportation
+183,공항,gong-hang,Airport,Places & Transportation
+184,역,yeok,Station,Places & Transportation
+185,버스 정류장,beo-seu jeong-ryu-jang,Bus stop,Places & Transportation
+186,지하철,ji-ha-cheol,Subway,Places & Transportation
+187,택시,taek-si,Taxi,Places & Transportation
+188,비행기,bi-haeng-gi,Airplane,Places & Transportation
+189,자전거,ja-jeon-geo,Bicycle,Places & Transportation
+190,도서관,do-seo-gwan,Library,Places & Transportation
+191,박물관,bang-mul-gwan,Museum,Places & Transportation
+192,공원,gong-won,Park,Places & Transportation
+193,백화점,baek-hwa-jeom,Department store,Places & Transportation
+194,시장,si-jang,Market,Places & Transportation
+195,사람,sa-ram,Person,People & Society
+196,친구,chin-gu,Friend,People & Society
+197,가족,ga-jok,Family,People & Society
+198,선생님,seon-saeng-nim,Teacher,People & Society
+199,학생,hak-saeng,Student,People & Society
+200,의사,ui-sa,Doctor,People & Society
+201,경찰,gyeong-chal,Police officer,People & Society
+202,아버지,a-beo-ji,Father,People & Society
+203,어머니,eo-meo-ni,Mother,People & Society
+204,형,hyeong,Older brother (male speaker),People & Society
+205,누나,nu-na,Older sister (male speaker),People & Society
+206,오빠,op-pa,Older brother (female speaker),People & Society
+207,언니,eon-ni,Older sister (female speaker),People & Society
+208,그리고,geu-ri-go,And,Grammar & Connectors
+209,하지만,ha-ji-man,But,Grammar & Connectors
+210,그래서,geu-rae-seo,So,Grammar & Connectors
+211,그러니까,geu-rae-si-ka,Therefore,Grammar & Connectors
+212,또는,tto-neun,Or,Grammar & Connectors
+213,아주,a-ju,Very,Grammar & Connectors
+214,너무,neo-mu,Too much,Grammar & Connectors
+215,자주,ja-ju,Often,Grammar & Connectors
+216,가끔,ga-kkeum,Sometimes,Grammar & Connectors
+217,날씨,nal-ssi,Weather,Weather & Nature
+218,비,bi,Rain,Weather & Nature
+219,눈,nun,Snow,Weather & Nature
+220,바람,ba-ram,Wind,Weather & Nature
+221,구름,gu-reum,Cloud,Weather & Nature
+222,하늘,ha-neul,Sky,Weather & Nature
+223,산,san,Mountain,Weather & Nature
+224,바다,ba-da,Sea / Ocean,Weather & Nature
+225,강,gang,River,Weather & Nature
+226,옷,ot,Clothes,Shopping & Hobbies
+227,신발,sin-bal,Shoes,Shopping & Hobbies
+228,가방,ga-bang,Bag,Shopping & Hobbies
+229,모자,mo-ja,Hat / Cap,Shopping & Hobbies
+230,영화,yeong-hwa,Movie,Shopping & Hobbies
+231,음악,eum-ak,Music,Shopping & Hobbies
+232,운동,un-dong,Exercise / Sports,Shopping & Hobbies
+233,여행,yeo-haeng,Travel,Shopping & Hobbies
+234,사진,sa-jin,Photo,Shopping & Hobbies
+235,머리,meo-ri,Head / Hair,Health & Body
+236,눈,nun,Eye,Health & Body
+237,귀,gwi,Ear,Health & Body
+238,코,ko,Nose,Health & Body
+239,입,ip,Mouth,Health & Body
+240,손,son,Hand,Health & Body
+241,발,bal,Foot,Health & Body
+242,다리,da-ri,Leg,Health & Body
+243,몸,mom,Body,Health & Body
+244,감기,gam-gi,Cold (illness),Health & Body
+245,책,chaek,Book,Education & Work
+246,공책,gong-chaek,Notebook,Education & Work
+247,연필,yeon-pil,Pencil,Education & Work
+248,볼펜,bol-pen,Ballpoint pen,Education & Work
+249,시험,si-heom,Exam / Test,Education & Work
+250,숙제,suk-je,Homework,Education & Work
+251,수업,su-eop,Class / Lesson,Education & Work
+252,질문,jil-mun,Question,Education & Work
+253,아기,,Baby,People & Society
+254,아이,,Child,People & Society
+255,어른,,Adult,People & Society
+256,남자,,Man,People & Society
+257,여자,,Woman,People & Society
+258,남편,,Husband,People & Society
+259,아내,,Wife,People & Society
+260,아들,,Son,People & Society
+261,딸,,Daughter,People & Society
+262,부모님,,Parents,People & Society
+263,할아버지,,Grandfather,People & Society
+264,할머니,,Grandmother,People & Society
+265,동생,,Younger sibling,People & Society
+266,형제,,Siblings,People & Society
+267,친척,,Relative,People & Society
+268,손님,,Guest,People & Society
+269,주인,,Owner,People & Society
+270,직원,,Employee,People & Society
+271,사장,,Company president,People & Society
+272,요리사,,Cook / Chef,People & Society
+273,간호사,,Nurse,People & Society
+274,운전기사,,Driver,People & Society
+275,가수,,Singer,People & Society
+276,배우,,Actor,People & Society
+277,운동선수,,Athlete,People & Society
+278,나라,,Country,Places & Transportation
+279,한국,,Korea,Places & Transportation
+280,고향,,Hometown,Places & Transportation
+281,도시,,City,Places & Transportation
+282,시골,,Countryside,Places & Transportation
+283,동네,,Neighborhood,Places & Transportation
+284,거리,,Street,Places & Transportation
+285,길,,Road / Way,Places & Transportation
+286,건물,,Building,Places & Transportation
+287,층,,Floor / Level,Places & Transportation
+288,입구,,Entrance,Places & Transportation
+289,출구,,Exit,Places & Transportation
+290,계단,,Stairs,Places & Transportation
+291,엘리베이터,,Elevator,Places & Transportation
+292,문구점,,Stationery store,Places & Transportation
+293,서점,,Bookstore,Places & Transportation
+294,우체국,,Post office,Places & Transportation
+295,경찰서,,Police station,Places & Transportation
+296,미용실,,Hair salon,Places & Transportation
+297,목욕탕,,Public bath,Places & Transportation
+298,호텔,,Hotel,Places & Transportation
+299,여관,,Inn,Places & Transportation
+300,교실,,Classroom,Education & Work
+301,사무실,,Office,Education & Work
+302,공장,,Factory,Education & Work
+303,회의실,,Meeting room,Education & Work
+304,기숙사,,Dormitory,Education & Work
+305,배,,Ship / Boat,Places & Transportation
+306,자동차,,Car,Places & Transportation
+307,기차,,Train,Places & Transportation
+308,고속버스,,Express bus,Places & Transportation
+309,시내버스,,City bus,Places & Transportation
+310,표,,Ticket,Places & Transportation
+311,지도,,Map,Places & Transportation
+312,여권,,Passport,Places & Transportation
+313,짐,,Luggage,Places & Transportation
+314,여행사,,Travel agency,Places & Transportation
+315,운전,,Driving,Places & Transportation
+316,출발,,Departure,Places & Transportation
+317,도착,,Arrival,Places & Transportation
+318,환승,,Transfer,Places & Transportation
+319,교통,,Traffic / Transportation,Places & Transportation
+320,월,,Month,Time & Numbers
+321,년,,Year,Time & Numbers
+322,날,,Day,Time & Numbers
+323,시간,,Time / Hour,Time & Numbers
+324,분,,Minute,Time & Numbers
+325,초,,Second,Time & Numbers
+326,오전,,AM / Morning time,Time & Numbers
+327,오후,,PM / Afternoon time,Time & Numbers
+328,새벽,,Dawn,Time & Numbers
+329,낮,,Daytime,Time & Numbers
+330,방학,,School vacation,Education & Work
+331,휴가,,Vacation leave,Education & Work
+332,생일,,Birthday,Time & Numbers
+333,날짜,,Date,Time & Numbers
+334,올해,,This year,Time & Numbers
+335,작년,,Last year,Time & Numbers
+336,내년,,Next year,Time & Numbers
+337,이번 달,,This month,Time & Numbers
+338,다음 달,,Next month,Time & Numbers
+339,지난달,,Last month,Time & Numbers
+340,이번 주,,This week,Time & Numbers
+341,다음 주,,Next week,Time & Numbers
+342,지난주,,Last week,Time & Numbers
+343,매일,,Every day,Time & Numbers
+344,항상,,Always,Grammar & Connectors
+345,보통,,Usually,Grammar & Connectors
+346,먼저,,First / Beforehand,Grammar & Connectors
+347,나중에,,Later,Grammar & Connectors
+348,곧,,Soon,Grammar & Connectors
+349,벌써,,Already,Grammar & Connectors
+350,아직,,Still / Yet,Grammar & Connectors
+351,아침밥,,Breakfast meal,Food & Dining
+352,점심밥,,Lunch meal,Food & Dining
+353,저녁밥,,Dinner meal,Food & Dining
+354,음식,,Food,Food & Dining
+355,한식,,Korean food,Food & Dining
+356,중식,,Chinese food,Food & Dining
+357,일식,,Japanese food,Food & Dining
+358,양식,,Western food,Food & Dining
+359,반찬,,Side dish,Food & Dining
+360,국,,Soup,Food & Dining
+361,찌개,,Stew,Food & Dining
+362,고추장,,Red pepper paste,Food & Dining
+363,된장,,Soybean paste,Food & Dining
+364,간장,,Soy sauce,Food & Dining
+365,식용유,,Cooking oil,Food & Dining
+366,밀가루,,Flour,Food & Dining
+367,국수,,Noodles,Food & Dining
+368,떡,,Rice cake,Food & Dining
+369,떡볶이,,Spicy rice cakes,Food & Dining
+370,김밥,,Gimbap,Food & Dining
+371,만두,,Dumplings,Food & Dining
+372,삼계탕,,Ginseng chicken soup,Food & Dining
+373,갈비,,Ribs,Food & Dining
+374,돼지고기,,Pork,Food & Dining
+375,소고기,,Beef,Food & Dining
+376,닭고기,,Chicken meat,Food & Dining
+377,맥주,,Beer,Food & Dining
+378,술,,Alcohol,Food & Dining
+379,메뉴,,Menu,Food & Dining
+380,계산서,,Bill / Check,Food & Dining
+381,맛,,Taste,Food & Dining
+382,냄새,,Smell,Food & Dining
+383,귤,,Tangerine,Food & Dining
+384,딸기,,Strawberry,Food & Dining
+385,포도,,Grapes,Food & Dining
+386,수박,,Watermelon,Food & Dining
+387,배,,Pear,Food & Dining
+388,복숭아,,Peach,Food & Dining
+389,감자,,Potato,Food & Dining
+390,고구마,,Sweet potato,Food & Dining
+391,양파,,Onion,Food & Dining
+392,마늘,,Garlic,Food & Dining
+393,파,,Green onion,Food & Dining
+394,오이,,Cucumber,Food & Dining
+395,당근,,Carrot,Food & Dining
+396,상추,,Lettuce,Food & Dining
+397,토마토,,Tomato,Food & Dining
+398,코트,,Coat,Shopping & Hobbies
+399,재킷,,Jacket,Shopping & Hobbies
+400,셔츠,,Shirt,Shopping & Hobbies
+401,바지,,Pants,Shopping & Hobbies
+402,치마,,Skirt,Shopping & Hobbies
+403,양말,,Socks,Shopping & Hobbies
+404,장갑,,Gloves,Shopping & Hobbies
+405,목도리,,Scarf,Shopping & Hobbies
+406,운동화,,Sneakers,Shopping & Hobbies
+407,구두,,Dress shoes,Shopping & Hobbies
+408,지갑,,Wallet,Shopping & Hobbies
+409,시계,,Watch,Shopping & Hobbies
+410,반지,,Ring,Shopping & Hobbies
+411,화장품,,Cosmetics,Shopping & Hobbies
+412,선물,,Gift,Shopping & Hobbies
+413,값,,Price / Value,Shopping & Hobbies
+414,가격,,Price,Shopping & Hobbies
+415,돈,,Money,Shopping & Hobbies
+416,현금,,Cash,Shopping & Hobbies
+417,카드,,Card,Shopping & Hobbies
+418,영수증,,Receipt,Shopping & Hobbies
+419,할인,,Discount,Shopping & Hobbies
+420,색깔,,Color,Shopping & Hobbies
+421,빨간색,,Red color,Shopping & Hobbies
+422,파란색,,Blue color,Shopping & Hobbies
+423,노란색,,Yellow color,Shopping & Hobbies
+424,초록색,,Green color,Shopping & Hobbies
+425,검은색,,Black color,Shopping & Hobbies
+426,하얀색,,White color,Shopping & Hobbies
+427,회색,,Gray color,Shopping & Hobbies
+428,취미,,Hobby,Shopping & Hobbies
+429,독서,,Reading books,Shopping & Hobbies
+430,그림,,Picture / Drawing,Shopping & Hobbies
+431,그림 그리기,,Drawing pictures,Shopping & Hobbies
+432,낚시,,Fishing,Shopping & Hobbies
+433,등산,,Mountain hiking,Shopping & Hobbies
+434,산책,,Walk / Stroll,Shopping & Hobbies
+435,축구,,Soccer,Shopping & Hobbies
+436,야구,,Baseball,Shopping & Hobbies
+437,농구,,Basketball,Shopping & Hobbies
+438,배구,,Volleyball,Shopping & Hobbies
+439,테니스,,Tennis,Shopping & Hobbies
+440,골프,,Golf,Shopping & Hobbies
+441,스키,,Skiing,Shopping & Hobbies
+442,피아노,,Piano,Shopping & Hobbies
+443,기타,,Guitar,Shopping & Hobbies
+444,노래방,,Karaoke room,Shopping & Hobbies
+445,공연,,Performance,Shopping & Hobbies
+446,전시회,,Exhibition,Shopping & Hobbies
+447,경기,,Game / Match,Shopping & Hobbies
+448,얼굴,,Face,Health & Body
+449,목,,Neck / Throat,Health & Body
+450,어깨,,Shoulder,Health & Body
+451,팔,,Arm,Health & Body
+452,손가락,,Finger,Health & Body
+453,발가락,,Toe,Health & Body
+454,배,,Stomach / Belly,Health & Body
+455,허리,,Waist / Lower back,Health & Body
+456,등,,Back,Health & Body
+457,가슴,,Chest,Health & Body
+458,무릎,,Knee,Health & Body
+459,피,,Blood,Health & Body
+460,약,,Medicine,Health & Body
+461,주사,,Injection,Health & Body
+462,열,,Fever,Health & Body
+463,기침,,Cough,Health & Body
+464,두통,,Headache,Health & Body
+465,치통,,Toothache,Health & Body
+466,상처,,Wound,Health & Body
+467,건강,,Health,Health & Body
+468,병,,Illness / Disease,Health & Body
+469,치료,,Treatment,Health & Body
+470,운동장,,Playground / Sports field,Health & Body
+471,봄,,Spring,Weather & Nature
+472,여름,,Summer,Weather & Nature
+473,가을,,Autumn,Weather & Nature
+474,겨울,,Winter,Weather & Nature
+475,계절,,Season,Weather & Nature
+476,기온,,Temperature,Weather & Nature
+477,햇빛,,Sunlight,Weather & Nature
+478,해,,Sun,Weather & Nature
+479,달,,Moon,Weather & Nature
+480,별,,Star,Weather & Nature
+481,나무,,Tree,Weather & Nature
+482,꽃,,Flower,Weather & Nature
+483,풀,,Grass,Weather & Nature
+484,숲,,Forest,Weather & Nature
+485,섬,,Island,Weather & Nature
+486,호수,,Lake,Weather & Nature
+487,동물,,Animal,Weather & Nature
+488,강아지,,Puppy / Dog,Weather & Nature
+489,고양이,,Cat,Weather & Nature
+490,새,,Bird,Weather & Nature
+491,물고기,,Fish animal,Weather & Nature
+492,신문,,Newspaper,Education & Work
+493,잡지,,Magazine,Education & Work
+494,사전,,Dictionary,Education & Work
+495,편지,,Letter,Education & Work
+496,이메일,,Email,Education & Work
+497,컴퓨터,,Computer,Education & Work
+498,노트북,,Laptop,Education & Work
+499,인터넷,,Internet,Education & Work
+500,휴대전화,,Mobile phone,Education & Work
+501,전화번호,,Phone number,Education & Work
+502,주소,,Address,Education & Work
+503,이름,,Name,Education & Work
+504,나이,,Age,People & Society
+505,직업,,Occupation,Education & Work
+506,전공,,Major / Field of study,Education & Work
+507,학기,,Semester,Education & Work
+508,학년,,School year / Grade,Education & Work
+509,대학교,,University,Education & Work
+510,초등학교,,Elementary school,Education & Work
+511,중학교,,Middle school,Education & Work
+512,고등학교,,High school,Education & Work
+513,졸업,,Graduation,Education & Work
+514,입학,,School admission,Education & Work
+515,출석,,Attendance,Education & Work
+516,결석,,Absence from class,Education & Work
+517,성적,,Grades,Education & Work
+518,공부,,Study,Education & Work
+519,연습,,Practice,Education & Work
+520,복습,,Review study,Education & Work
+521,예습,,Preparation study,Education & Work
+522,발음,,Pronunciation,Education & Work
+523,문법,,Grammar,Education & Work
+524,단어,,Word / Vocabulary,Education & Work
+525,뜻,,Meaning,Education & Work
+526,문장,,Sentence,Education & Work
+527,이야기,,Story,Education & Work
+528,대답,,Answer / Reply,Education & Work
+529,설명,,Explanation,Education & Work
+530,회의,,Meeting,Education & Work
+531,일,,Work / Matter,Education & Work
+532,계획,,Plan,Education & Work
+533,준비,,Preparation,Education & Work
+534,문제,,Problem / Question,Education & Work
+535,방법,,Method / Way,Education & Work
+536,생각,,Thought / Idea,Education & Work
+537,기분,,Feeling / Mood,People & Society
+538,마음,,Heart / Mind,People & Society
+539,안,,Inside,Grammar & Connectors
+540,밖,,Outside,Grammar & Connectors
+541,앞,,Front,Grammar & Connectors
+542,뒤,,Back / Behind,Grammar & Connectors
+543,옆,,Side / Beside,Grammar & Connectors
+544,위,,Above / On top,Grammar & Connectors
+545,아래,,Below / Under,Grammar & Connectors
+546,밑,,Bottom / Underneath,Grammar & Connectors
+547,왼쪽,,Left side,Grammar & Connectors
+548,오른쪽,,Right side,Grammar & Connectors
+549,가운데,,Middle / Center,Grammar & Connectors
+550,근처,,Nearby,Grammar & Connectors
+551,사이,,Between,Grammar & Connectors
+552,정도,,About / Degree,Grammar & Connectors
+553,쯤,,Around / Approximately,Grammar & Connectors
+554,마다,,Every / Each,Grammar & Connectors
+555,부터,,From / Since,Grammar & Connectors
+556,까지,,Until / To,Grammar & Connectors
+557,처럼,,Like / As,Grammar & Connectors
+558,보다,,Than,Grammar & Connectors
+559,만,,Only,Grammar & Connectors
+560,도,,Also / Too,Grammar & Connectors
+561,다시,,Again,Grammar & Connectors
+562,함께,,Together,Grammar & Connectors
+563,혼자,,Alone,Grammar & Connectors
+564,직접,,Directly / In person,Grammar & Connectors
+565,꼭,,Surely / Definitely,Grammar & Connectors
+566,아마,,Probably,Grammar & Connectors
+567,정말,,Really,Grammar & Connectors
+568,진짜,,Truly / Really,Grammar & Connectors
+569,조금,,A little,Grammar & Connectors
+570,많이,,A lot,Grammar & Connectors
+571,잘,,Well,Grammar & Connectors
+572,빨리,,Quickly,Grammar & Connectors
+573,천천히,,Slowly,Grammar & Connectors
+574,아까,,A little while ago,Grammar & Connectors
+575,이따가,,A little later,Grammar & Connectors
+576,갑자기,,Suddenly,Grammar & Connectors
+577,계속,,Continuously,Grammar & Connectors
+578,거의,,Almost,Grammar & Connectors
+579,별로,,Not really,Grammar & Connectors
+580,전혀,,Not at all,Grammar & Connectors
+581,특히,,Especially,Grammar & Connectors
+582,예를 들면,,For example,Grammar & Connectors
+583,왜,,Why,Grammar & Connectors
+584,어떻게,,How,Grammar & Connectors
+585,언제,,When,Grammar & Connectors
+586,어디,,Where,Grammar & Connectors
+587,누구,,Who,Grammar & Connectors
+588,무엇,,What,Grammar & Connectors
+589,몇,,How many,Grammar & Connectors
+590,얼마,,How much,Grammar & Connectors
+591,어느,,Which,Grammar & Connectors
+592,무슨,,What kind of,Grammar & Connectors
+593,가깝다,,To be near,Adjectives (States)
+594,멀다,,To be far,Adjectives (States)
+595,길다,,To be long,Adjectives (States)
+596,짧다,,To be short,Adjectives (States)
+597,높다,,To be high,Adjectives (States)
+598,낮다,,To be low,Adjectives (States)
+599,두껍다,,To be thick,Adjectives (States)
+600,얇다,,To be thin,Adjectives (States)
+601,깊다,,To be deep,Adjectives (States)
+602,깨끗하다,,To be clean,Adjectives (States)
+603,더럽다,,To be dirty,Adjectives (States)
+604,맑다,,To be clear,Adjectives (States)
+605,흐리다,,To be cloudy,Adjectives (States)
+606,건강하다,,To be healthy,Adjectives (States)
+607,친절하다,,To be kind,Adjectives (States)
+608,불친절하다,,To be unkind,Adjectives (States)
+609,유명하다,,To be famous,Adjectives (States)
+610,중요하다,,To be important,Adjectives (States)
+611,필요하다,,To be necessary,Adjectives (States)
+612,편하다,,To be comfortable,Adjectives (States)
+613,불편하다,,To be uncomfortable,Adjectives (States)
+614,위험하다,,To be dangerous,Adjectives (States)
+615,안전하다,,To be safe,Adjectives (States)
+616,맞다,,To be correct,Adjectives (States)
+617,틀리다,,To be wrong,Adjectives (States)
+618,같다,,To be the same,Adjectives (States)
+619,다르다,,To be different,Adjectives (States)
+620,예쁘다,,To be pretty,Adjectives (States)
+621,멋있다,,To be cool / Stylish,Adjectives (States)
+622,귀엽다,,To be cute,Adjectives (States)
+623,맛있다,,To be delicious,Adjectives (States)
+624,맛없다,,To taste bad,Adjectives (States)
+625,배고프다,,To be hungry,Adjectives (States)
+626,목마르다,,To be thirsty,Adjectives (States)
+627,졸리다,,To be sleepy,Adjectives (States)
+628,부끄럽다,,To be embarrassed,Adjectives (States)
+629,무섭다,,To be scary,Adjectives (States)
+630,심심하다,,To be bored,Adjectives (States)
+631,복잡하다,,To be complicated / Crowded,Adjectives (States)
+632,간단하다,,To be simple,Adjectives (States)
+633,들어가다,,To enter,Verbs (Actions)
+634,나가다,,To go out,Verbs (Actions)
+635,올라가다,,To go up,Verbs (Actions)
+636,내려가다,,To go down,Verbs (Actions)
+637,올라오다,,To come up,Verbs (Actions)
+638,내려오다,,To come down,Verbs (Actions)
+639,들어오다,,To come in,Verbs (Actions)
+640,나오다,,To come out,Verbs (Actions)
+641,돌아가다,,To return / Go back,Verbs (Actions)
+642,돌아오다,,To return / Come back,Verbs (Actions)
+643,지내다,,To spend time / Get along,Verbs (Actions)
+644,놀다,,To play / Hang out,Verbs (Actions)
+645,이야기하다,,To talk / Tell a story,Verbs (Actions)
+646,묻다,,To ask,Verbs (Actions)
+647,대답하다,,To answer,Verbs (Actions)
+648,설명하다,,To explain,Verbs (Actions)
+649,물어보다,,To ask / Inquire,Verbs (Actions)
+650,가져오다,,To bring,Verbs (Actions)
+651,가지고 가다,,To take with,Verbs (Actions)
+652,놓다,,To put down,Verbs (Actions)
+653,넣다,,To put in,Verbs (Actions)
+654,빼다,,To take out / Remove,Verbs (Actions)
+655,켜다,,To turn on,Verbs (Actions)
+656,끄다,,To turn off,Verbs (Actions)
+657,고르다,,To choose,Verbs (Actions)
+658,예약하다,,To reserve,Verbs (Actions)
+659,주문하다,,To order,Verbs (Actions)
+660,계산하다,,To pay / Calculate,Verbs (Actions)
+661,갈아타다,,To transfer vehicles,Verbs (Actions)
+662,운전하다,,To drive,Verbs (Actions)
+663,도착하다,,To arrive,Verbs (Actions)
+664,출발하다,,To depart,Verbs (Actions)
+665,늦다,,To be late,Verbs (Actions)
+666,늦게 오다,,To come late,Verbs (Actions)
+667,일찍 오다,,To come early,Verbs (Actions)
+668,참석하다,,To attend,Verbs (Actions)
+669,결석하다,,To be absent,Verbs (Actions)
+670,신청하다,,To apply,Verbs (Actions)
+671,등록하다,,To register,Verbs (Actions)
+672,취소하다,,To cancel,Verbs (Actions)
+673,빌리다,,To borrow,Verbs (Actions)
+674,빌려주다,,To lend,Verbs (Actions)
+675,돌려주다,,To return something,Verbs (Actions)
+676,고치다,,To fix / Repair,Verbs (Actions)
+677,바꾸다,,To change / Exchange,Verbs (Actions)
+678,사용하다,,To use,Verbs (Actions)
+679,이용하다,,To use a service,Verbs (Actions)
+680,연습하다,,To practice,Verbs (Actions)
+681,복습하다,,To review lessons,Verbs (Actions)
+682,예습하다,,To preview lessons,Verbs (Actions)
+683,졸업하다,,To graduate,Verbs (Actions)
+684,입학하다,,To enter school,Verbs (Actions)
+685,합격하다,,To pass an exam,Verbs (Actions)
+686,떨어지다,,To fail / Fall,Verbs (Actions)
+687,쉬워지다,,To become easy,Verbs (Actions)
+688,어려워지다,,To become difficult,Verbs (Actions)
+689,좋아하다,,To like,Verbs (Actions)
+690,싫어하다,,To dislike,Verbs (Actions)
+691,사랑하다,,To love,Verbs (Actions)
+692,필요하다,,To need,Verbs (Actions)
+693,원하다,,To want,Verbs (Actions)
+694,기억하다,,To remember,Verbs (Actions)
+695,잊다,,To forget,Verbs (Actions)
+696,믿다,,To believe,Verbs (Actions)
+697,걱정하다,,To worry,Verbs (Actions)
+698,기뻐하다,,To be pleased,Verbs (Actions)
+699,놀라다,,To be surprised,Verbs (Actions)
+700,화내다,,To get angry,Verbs (Actions)
+701,사과하다,,To apologize,Verbs (Actions)
+702,축하하다,,To congratulate,Verbs (Actions)
+703,초대하다,,To invite,Verbs (Actions)
+704,방문하다,,To visit,Verbs (Actions)
+705,소개하다,,To introduce,Verbs (Actions)
+706,연락하다,,To contact,Verbs (Actions)
+707,약속하다,,To promise / Make an appointment,Verbs (Actions)
+708,결혼하다,,To marry,Verbs (Actions)
+709,이사하다,,To move house,Verbs (Actions)
+710,태어나다,,To be born,Verbs (Actions)
+711,죽다,,To die,Verbs (Actions)
+712,다치다,,To get hurt,Verbs (Actions)
+713,낫다,,To recover / Get better,Verbs (Actions)
+714,입원하다,,To be hospitalized,Verbs (Actions)
+715,퇴원하다,,To leave the hospital,Verbs (Actions)
+716,치료하다,,To treat medically,Verbs (Actions)
+717,재다,,To measure,Verbs (Actions)
+718,찍다,,To take a photo,Verbs (Actions)
+719,사진을 찍다,,To take a picture,Verbs (Actions)
+720,구경하다,,To sightsee,Verbs (Actions)
+721,여행하다,,To travel,Verbs (Actions)
+722,운동하다,,To exercise,Verbs (Actions)
+723,등산하다,,To hike,Verbs (Actions)
+724,산책하다,,To take a walk,Verbs (Actions)
+725,쇼핑하다,,To shop,Verbs (Actions)
+726,노력하다,,To make an effort,Verbs (Actions)
+727,성공하다,,To succeed,Verbs (Actions)
+728,실패하다,,To fail,Verbs (Actions)
+729,정하다,,To decide,Verbs (Actions)
+730,알리다,,To inform,Verbs (Actions)
+731,확인하다,,To confirm,Verbs (Actions)
+732,비교하다,,To compare,Verbs (Actions)
+733,선택하다,,To select,Verbs (Actions)
+734,계속하다,,To continue,Verbs (Actions)
+735,멈추다,,To stop,Verbs (Actions)
+736,줄다,,To decrease,Verbs (Actions)
+737,늘다,,To increase,Verbs (Actions)
+738,오르다,,To rise / Climb,Verbs (Actions)
+739,내리다,,To descend / Get off,Verbs (Actions)
+740,지나다,,To pass by,Verbs (Actions)
+741,건너다,,To cross,Verbs (Actions)
+742,돌다,,To turn / Go around,Verbs (Actions)
+743,서다,,To stand,Verbs (Actions)
+744,앉다,,To sit,Verbs (Actions)
+745,눕다,,To lie down,Verbs (Actions)
+746,세우다,,To stop / Park,Verbs (Actions)
+747,주차하다,,To park,Verbs (Actions)
+748,기르다,,To raise / Grow,Verbs (Actions)
+749,자라다,,To grow up,Verbs (Actions)
+750,피우다,,To smoke / Bloom,Verbs (Actions)
+751,피다,,To bloom,Verbs (Actions)
+752,지다,,To set / Lose,Verbs (Actions)
+753,버리다,,To throw away,Verbs (Actions)
+754,줍다,,To pick up,Verbs (Actions)
+755,닦다,,To wipe / Brush,Verbs (Actions)
+756,자르다,,To cut,Verbs (Actions)
+757,붙이다,,To attach,Verbs (Actions)
+758,떼다,,To detach,Verbs (Actions)
+759,만들다,,To make,Verbs (Actions)
+760,준비하다,,To prepare,Verbs (Actions)
+761,정리하다,,To organize,Verbs (Actions)
+762,씻기다,,To wash someone,Verbs (Actions)
+763,목욕하다,,To bathe,Verbs (Actions)
+764,화장하다,,To put on makeup,Verbs (Actions)
+765,입어 보다,,To try on clothes,Verbs (Actions)
+766,신어 보다,,To try on shoes,Verbs (Actions)
+767,갈아입다,,To change clothes,Verbs (Actions)
+768,벗기다,,To undress someone,Verbs (Actions)
+769,재미있어하다,,To find interesting,Verbs (Actions)
+770,열리다,,To be opened,Verbs (Actions)
+771,닫히다,,To be closed,Verbs (Actions)
+772,켜지다,,To be turned on,Verbs (Actions)
+773,꺼지다,,To be turned off,Verbs (Actions)
+774,한 개,,one thing,Time & Numbers
+775,한 명,,one person,Time & Numbers
+776,한 분,,one honored person,Time & Numbers
+777,한 마리,,one animal,Time & Numbers
+778,한 권,,one book,Time & Numbers
+779,한 장,,one sheet,Time & Numbers
+780,한 잔,,one cup,Time & Numbers
+781,한 병,,one bottle,Time & Numbers
+782,한 그릇,,one bowl,Time & Numbers
+783,한 대,,one machine or vehicle,Time & Numbers
+784,한 켤레,,one pair of shoes,Time & Numbers
+785,한 번,,one time / occurrence,Time & Numbers
+786,한 시간,,one hour,Time & Numbers
+787,한 살,,one year old,Time & Numbers
+788,한 층,,one floor,Time & Numbers
+789,두 개,,two thing,Time & Numbers
+790,두 명,,two person,Time & Numbers
+791,두 분,,two honored person,Time & Numbers
+792,두 마리,,two animal,Time & Numbers
+793,두 권,,two book,Time & Numbers
+794,두 장,,two sheet,Time & Numbers
+795,두 잔,,two cup,Time & Numbers
+796,두 병,,two bottle,Time & Numbers
+797,두 그릇,,two bowl,Time & Numbers
+798,두 대,,two machine or vehicle,Time & Numbers
+799,두 켤레,,two pair of shoes,Time & Numbers
+800,두 번,,two time / occurrence,Time & Numbers
+801,신문사,,Newspaper company,Education & Work
+802,방송국,,Broadcasting station,Education & Work
+803,대사관,,Embassy,Places & Transportation
+804,박람회,,Expo / Fair,Shopping & Hobbies
+805,안내소,,Information desk,Places & Transportation
+806,매표소,,Ticket booth,Places & Transportation
+807,정류소,,Transit stop,Places & Transportation
+808,주차장,,Parking lot,Places & Transportation
+809,횡단보도,,Crosswalk,Places & Transportation
+810,신호등,,Traffic light,Places & Transportation
+811,골목,,Alley,Places & Transportation
+812,사거리,,Intersection,Places & Transportation
+813,교차로,,Crossroads,Places & Transportation
+814,터미널,,Terminal,Places & Transportation
+815,항구,,Harbor / Port,Places & Transportation
+816,도청,,Provincial office,Places & Transportation
+817,시청,,City hall,Places & Transportation
+818,구청,,District office,Places & Transportation
+819,주민센터,,Community center,Places & Transportation
+820,문화센터,,Culture center,Places & Transportation
+821,냉동실,,Freezer,Daily Life & House
+822,현관,,Front entrance,Daily Life & House
+823,벽,,Wall,Daily Life & House
+824,바닥,,Floor surface,Daily Life & House
+825,천장,,Ceiling,Daily Life & House
+826,지붕,,Roof,Daily Life & House
+827,서랍,,Drawer,Daily Life & House
+828,선반,,Shelf,Daily Life & House
+829,장식장,,Display cabinet,Daily Life & House
+830,침실,,Bedroom,Daily Life & House
+831,욕실,,Bathroom,Daily Life & House
+832,세면대,,Washbasin,Daily Life & House
+833,변기,,Toilet bowl,Daily Life & House
+834,샤워기,,Shower head,Daily Life & House
+835,수도,,Water supply / Tap water,Daily Life & House
+836,가스레인지,,Gas stove,Daily Life & House
+837,밥솥,,Rice cooker,Daily Life & House
+838,주전자,,Kettle,Daily Life & House
+839,그릇,,Bowl / Dishware,Daily Life & House
+840,행주,,Dishcloth,Daily Life & House
+841,걸레,,Cleaning rag / Mop,Daily Life & House
+842,빨래,,Laundry,Daily Life & House
+843,쓰레기,,Trash,Daily Life & House
+844,분리수거,,Recycling separation,Daily Life & House
+845,전기,,Electricity,Daily Life & House
+846,난방,,Heating,Daily Life & House
+847,냉방,,Air cooling,Daily Life & House
+848,콩,,Bean,Food & Dining
+849,두부,,Tofu,Food & Dining
+850,미역,,Seaweed,Food & Dining
+851,김,,Dried seaweed,Food & Dining
+852,새우,,Shrimp,Food & Dining
+853,오징어,,Squid,Food & Dining
+854,참치,,Tuna,Food & Dining
+855,햄,,Ham,Food & Dining
+856,치즈,,Cheese,Food & Dining
+857,버터,,Butter,Food & Dining
+858,잼,,Jam,Food & Dining
+859,꿀,,Honey,Food & Dining
+860,얼음,,Ice,Food & Dining
+861,반찬가게,,Side dish shop,Food & Dining
+862,포장,,Takeout / Packaging,Food & Dining
+863,배달,,Delivery,Food & Dining
+864,식사,,Meal,Food & Dining
+865,간식,,Snack,Food & Dining
+866,후식,,Dessert,Food & Dining
+867,식욕,,Appetite,Food & Dining
+868,분홍색,,Pink color,Shopping & Hobbies
+869,보라색,,Purple color,Shopping & Hobbies
+870,갈색,,Brown color,Shopping & Hobbies
+871,남색,,Navy color,Shopping & Hobbies
+872,주황색,,Orange color,Shopping & Hobbies
+873,크기,,Size,Shopping & Hobbies
+874,길이,,Length,Shopping & Hobbies
+875,무게,,Weight,Shopping & Hobbies
+876,품질,,Quality,Shopping & Hobbies
+877,제품,,Product,Shopping & Hobbies
+878,물건,,Item / Object,Shopping & Hobbies
+879,상품,,Goods / Merchandise,Shopping & Hobbies
+880,무료,,Free of charge,Shopping & Hobbies
+881,유료,,Paid / Fee-based,Shopping & Hobbies
+882,교환,,Exchange,Shopping & Hobbies
+883,환불,,Refund,Shopping & Hobbies
+884,계산대,,Checkout counter,Shopping & Hobbies
+885,판매원,,Salesperson,Shopping & Hobbies
+886,손수건,,Handkerchief,Shopping & Hobbies
+887,액세서리,,Accessory,Shopping & Hobbies
+888,치과,,Dentist clinic,Health & Body
+889,내과,,Internal medicine clinic,Health & Body
+890,피부과,,Dermatology clinic,Health & Body
+891,안과,,Eye clinic,Health & Body
+892,응급실,,Emergency room,Health & Body
+893,보험,,Insurance,Health & Body
+894,체온,,Body temperature,Health & Body
+895,몸살,,Body aches,Health & Body
+896,콧물,,Runny nose,Health & Body
+897,재채기,,Sneeze,Health & Body
+898,목감기,,Sore throat cold,Health & Body
+899,소화,,Digestion,Health & Body
+900,소화제,,Digestive medicine,Health & Body
+901,영양,,Nutrition,Health & Body
+902,휴식,,Rest / Break,Health & Body
+903,잠,,Sleep,Health & Body
+904,생활습관,,Lifestyle habit,Health & Body
+905,스트레스,,Stress,Health & Body
+906,체중,,Body weight,Health & Body
+907,키,,Height,Health & Body
+908,안개,,Fog,Weather & Nature
+909,태풍,,Typhoon,Weather & Nature
+910,홍수,,Flood,Weather & Nature
+911,가뭄,,Drought,Weather & Nature
+912,번개,,Lightning,Weather & Nature
+913,천둥,,Thunder,Weather & Nature
+914,무지개,,Rainbow,Weather & Nature
+915,공기,,Air,Weather & Nature
+916,환경,,Environment,Weather & Nature
+917,자연,,Nature,Weather & Nature
+918,지구,,Earth,Weather & Nature
+919,불꽃,,Flame,Weather & Nature
+920,잎,,Leaf,Weather & Nature
+921,가지,,Branch,Weather & Nature
+922,뿌리,,Root,Weather & Nature
+923,벌레,,Insect,Weather & Nature
+924,모기,,Mosquito,Weather & Nature
+925,나비,,Butterfly,Weather & Nature
+926,호랑이,,Tiger,Weather & Nature
+927,토끼,,Rabbit,Weather & Nature
+928,자료,,Materials / Data,Education & Work
+929,정보,,Information,Education & Work
+930,공지,,Notice / Announcement,Education & Work
+931,안내,,Guidance / Information,Education & Work
+932,신청서,,Application form,Education & Work
+933,보고서,,Report,Education & Work
+934,발표,,Presentation,Education & Work
+935,토론,,Discussion / Debate,Education & Work
+936,찬성,,Agreement / Approval,Education & Work
+937,반대,,Opposition,Education & Work
+938,의견,,Opinion,Education & Work
+939,목표,,Goal,Education & Work
+940,결과,,Result,Education & Work
+941,이유,,Reason,Education & Work
+942,원인,,Cause,Education & Work
+943,내용,,Content,Education & Work
+944,주제,,Topic,Education & Work
+945,제목,,Title,Education & Work
+946,쪽,,Page side / Direction,Education & Work
+947,페이지,,Page,Education & Work
+948,줄,,Line / Row,Education & Work
+949,칸,,Blank / Space,Education & Work
+950,정답,,Correct answer,Education & Work
+951,오답,,Wrong answer,Education & Work
+952,점수,,Score,Education & Work
+953,상,,Prize / Award,Education & Work
+954,상장,,Certificate of award,Education & Work
+955,면접,,Interview,Education & Work
+956,경험,,Experience,Education & Work
+957,능력,,Ability,Education & Work
+958,관계,,Relationship,People & Society
+959,성격,,Personality,People & Society
+960,버릇,,Habit / Mannerism,People & Society
+961,예절,,Manners / Etiquette,People & Society
+962,존댓말,,Honorific speech,People & Society
+963,반말,,Casual speech,People & Society
+964,문화,,Culture,People & Society
+965,생활,,Life / Living,People & Society
+966,인기,,Popularity,People & Society
+967,관심,,Interest / Attention,People & Society
+968,걱정,,Worry,People & Society
+969,행복,,Happiness,People & Society
+970,불행,,Unhappiness,People & Society
+971,웃음,,Laughter / Smile,People & Society
+972,눈물,,Tears,People & Society
+973,실수,,Mistake,People & Society
+974,거짓말,,Lie / Falsehood,People & Society
+975,비밀,,Secret,People & Society
+976,약속,,Promise / Appointment,People & Society
+977,결혼식,,Wedding ceremony,People & Society
+978,장례식,,Funeral,People & Society
+979,파티,,Party,People & Society
+980,모임,,Gathering,People & Society
+981,동호회,,Club / Interest group,People & Society
+982,회원,,Member,People & Society
+983,가능하다,,To be possible,Adjectives (States)
+984,불가능하다,,To be impossible,Adjectives (States)
+985,충분하다,,To be sufficient,Adjectives (States)
+986,부족하다,,To be insufficient,Adjectives (States)
+987,정확하다,,To be accurate,Adjectives (States)
+988,확실하다,,To be certain,Adjectives (States)
+989,이상하다,,To be strange,Adjectives (States)
+990,특별하다,,To be special,Adjectives (States)
+991,평범하다,,To be ordinary,Adjectives (States)
+992,자유롭다,,To be free / Unrestricted,Adjectives (States)
+993,부지런하다,,To be diligent,Adjectives (States)
+994,게으르다,,To be lazy,Adjectives (States)
+995,신선하다,,To be fresh,Adjectives (States)
+996,딱딱하다,,To be hard / Stiff,Adjectives (States)
+997,부드럽다,,To be soft,Adjectives (States)
+998,뜨겁다,,To be hot to touch,Adjectives (States)
+999,차갑다,,To be cold to touch,Adjectives (States)
+1000,어둡다,,To be dark,Adjectives (States)

@@ -1533,191 +1533,103 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
 
     <!-- Data & Application Logic -->
     <script>
-        // Massive 1000+ TOPIK I Vocabulary Dataset
-        const vocabDatabase = [
-            // Daily Life & House (100)
-            { id: 1, kr: "집", rom: "jip", en: "House / Home", cat: "Daily Life & House" },
-            { id: 2, kr: "방", rom: "bang", en: "Room", cat: "Daily Life & House" },
-            { id: 3, kr: "문", rom: "mun", en: "Door", cat: "Daily Life & House" },
-            { id: 4, kr: "창문", rom: "chang-mun", en: "Window", cat: "Daily Life & House" },
-            { id: 5, kr: "침대", rom: "chim-dae", en: "Bed", cat: "Daily Life & House" },
-            { id: 6, kr: "책상", rom: "chaek-sang", en: "Desk", cat: "Daily Life & House" },
-            { id: 7, kr: "의자", rom: "ui-ja", en: "Chair", cat: "Daily Life & House" },
-            { id: 8, kr: "옷장", rom: "ot-jang", en: "Wardrobe / Closet", cat: "Daily Life & House" },
-            { id: 9, kr: "냉장고", rom: "naeng-jang-go", en: "Refrigerator", cat: "Daily Life & House" },
-            { id: 10, kr: "세탁기", rom: "se-tak-gi", en: "Washing machine", cat: "Daily Life & House" },
-            { id: 11, kr: "시계", rom: "si-gye", en: "Clock / Watch", cat: "Daily Life & House" },
-            { id: 12, kr: "거울", rom: "geo-ul", en: "Mirror", cat: "Daily Life & House" },
-            { id: 13, kr: "수건", rom: "su-geon", en: "Towel", cat: "Daily Life & House" },
-            { id: 14, kr: "비누", rom: "bi-nu", en: "Soap", cat: "Daily Life & House" },
-            { id: 15, kr: "치약", rom: "chi-yak", en: "Toothpaste", cat: "Daily Life & House" },
-            { id: 16, kr: "칫솔", rom: "chit-sol", en: "Toothbrush", cat: "Daily Life & House" },
-            { id: 17, kr: "휴지", rom: "hyu-ji", en: "Tissue / Toilet paper", cat: "Daily Life & House" },
-            { id: 18, kr: "열쇠", rom: "yeol-ssoe", en: "Key", cat: "Daily Life & House" },
-            { id: 19, kr: "우산", rom: "u-san", en: "Umbrella", cat: "Daily Life & House" },
-            { id: 20, kr: "안경", rom: "an-gyeong", en: "Glasses", cat: "Daily Life & House" },
-            { id: 21, kr: "소파", rom: "so-pa", en: "Sofa", cat: "Daily Life & House" },
-            { id: 22, kr: "탁자", rom: "tak-ja", en: "Table", cat: "Daily Life & House" },
-            { id: 23, kr: "불", rom: "bul", en: "Light / Fire", cat: "Daily Life & House" },
-            { id: 24, kr: "전등", rom: "jeon-deung", en: "Electric lamp", cat: "Daily Life & House" },
-            { id: 25, kr: "청소기", rom: "cheong-so-gi", en: "Vacuum cleaner", cat: "Daily Life & House" },
-            { id: 26, kr: "화장실", rom: "hwa-jang-sil", en: "Restroom / Bathroom", cat: "Daily Life & House" },
-            { id: 27, kr: "부엌", rom: "bu-eok", en: "Kitchen", cat: "Daily Life & House" },
-            { id: 28, kr: "거실", rom: "geo-sil", en: "Living room", cat: "Daily Life & House" },
-            { id: 29, kr: "베란다", rom: "be-ran-da", en: "Balcony", cat: "Daily Life & House" },
-            { id: 30, kr: "마당", rom: "ma-dang", en: "Yard / Garden", cat: "Daily Life & House" },
-            { id: 31, kr: "이불", rom: "i-bul", en: "Blanket / Quilt", cat: "Daily Life & House" },
-            { id: 32, kr: "베개", rom: "be-gae", en: "Pillow", cat: "Daily Life & House" },
-            { id: 33, kr: "빗", rom: "bit", en: "Comb", cat: "Daily Life & House" },
-            { id: 34, kr: "드라이기", rom: "deu-ra-i-gi", en: "Hair dryer", cat: "Daily Life & House" },
-            { id: 35, kr: "쓰레기통", rom: "sseu-re-gi-tong", en: "Trash can", cat: "Daily Life & House" },
-            { id: 36, kr: "수저", rom: "su-jeo", en: "Spoon and chopsticks", cat: "Daily Life & House" },
-            { id: 37, kr: "숟가락", rom: "sut-ga-rak", en: "Spoon", cat: "Daily Life & House" },
-            { id: 38, kr: "젓가락", rom: "jeot-ga-rak", en: "Chopsticks", cat: "Daily Life & House" },
-            { id: 39, kr: "접시", rom: "jeop-si", en: "Plate / Dish", cat: "Daily Life & House" },
-            { id: 40, kr: "컵", rom: "keop", en: "Cup / Glass", cat: "Daily Life & House" },
-            { id: 41, kr: "냄비", rom: "naem-bi", en: "Pot", cat: "Daily Life & House" },
-            { id: 42, kr: "프라이팬", rom: "peu-ra-i-paen", en: "Frying pan", cat: "Daily Life & House" },
-            { id: 43, kr: "가위", rom: "ga-wi", en: "Scissors", cat: "Daily Life & House" },
-            { id: 44, kr: "칼", rom: "kal", en: "Knife", cat: "Daily Life & House" },
-            { id: 45, kr: "전자레인지", rom: "jeon-ja-re-in-ji", en: "Microwave", cat: "Daily Life & House" },
-            { id: 46, kr: "에어컨", rom: "e-eo-keon", en: "Air conditioner", cat: "Daily Life & House" },
-            { id: 47, kr: "선풍기", rom: "seon-pung-gi", en: "Electric fan", cat: "Daily Life & House" },
-            { id: 48, kr: "난로", rom: "nal-ro", en: "Heater", cat: "Daily Life & House" },
-            { id: 49, kr: "콘센트", rom: "kon-sen-teu", en: "Electrical outlet", cat: "Daily Life & House" },
-            { id: 50, kr: "충전기", rom: "chung-jeon-gi", en: "Charger", cat: "Daily Life & House" }
-        ];
+        // Vocabulary data is loaded from vocab.csv at startup.
+        let vocabDatabase = [];
+        let categoriesList = [];
 
-        // Generate remaining 950+ words dynamically with comprehensive real TOPIK I vocabulary patterns
-        const categoriesList = [
-            "Verbs (Actions)", "Adjectives (States)", "Food & Dining", 
-            "Time & Numbers", "Places & Transportation", "People & Society", 
-            "Grammar & Connectors", "Weather & Nature", "Shopping & Hobbies", 
-            "Health & Body", "Education & Work"
-        ];
+        function parseCsv(text) {
+            const rows = [];
+            let row = [];
+            let value = '';
+            let inQuotes = false;
 
-        // Helper word banks for building 1000 authentic TOPIK I terms
-        const wordBanks = {
-            "Verbs (Actions)": [
-                ["가다", "ga-da", "To go"], ["오다", "o-da", "To come"], ["먹다", "meok-da", "To eat"],
-                ["마시다", "ma-si-da", "To drink"], ["보다", "bo-da", "To see / watch"], ["듣다", "deut-da", "To listen"],
-                ["읽다", "ik-da", "To read"], ["쓰다", "sseu-da", "To write"], ["말하다", "mal-ha-da", "To speak"],
-                ["공부하다", "gong-bu-ha-da", "To study"], ["일하다", "il-ha-da", "To work"], ["쉬다", "swi-da", "To rest"],
-                ["자다", "ja-da", "To sleep"], ["일어나다", "i-reo-na-da", "To wake up"], ["살다", "sal-da", "To live"],
-                ["사다", "sa-da", "To buy"], ["팔다", "pal-da", "To sell"], ["만나다", "man-na-da", "To meet"],
-                ["기다리다", "gi-da-ri-da", "To wait"], ["가르치다", "ga-reu-chi-da", "To teach"], ["배우다", "bae-u-da", "To learn"],
-                ["웃다", "ut-da", "To laugh"], ["울다", "ul-da", "To cry"], ["걷다", "geot-da", "To walk"],
-                ["뛰다", "ttwi-da", "To run"], ["타다", "ta-da", "To ride"], ["내리다", "nae-ri-da", "To get off"],
-                ["입다", "ip-da", "To wear (clothes)"], ["신다", "sin-da", "To wear (shoes)"], ["벗다", "beot-da", "To take off"],
-                ["씻다", "ssit-da", "To wash"], ["청소하다", "cheong-so-ha-da", "To clean"], ["요리하다", "yo-ri-ha-da", "To cook"],
-                ["전화하다", "jeon-hwa-ha-da", "To make a call"], ["수영하다", "su-yeong-ha-da", "To swim"],
-                ["노래하다", "no-rae-ha-da", "To sing"], ["춤추다", "chum-chu-da", "To dance"], ["생각하다", "saeng-gak-ha-da", "To think"],
-                ["알다", "al-da", "To know"], ["모르다", "mo-reu-da", "To not know"], ["돕다", "dop-da", "To help"],
-                ["보내다", "bo-nae-da", "To send"], ["받다", "bat-da", "To receive"], ["주다", "ju-da", "To give"],
-                ["찾다", "chat-da", "To search / find"], ["잃어버리다", "ir-eo-beori-da", "To lose"], ["시작하다", "si-jak-ha-da", "To start"],
-                ["끝나다", "kkeun-na-da", "To finish"], ["열다", "yeol-da", "To open"], ["닫다", "dat-da", "To close"]
-            ],
-            "Adjectives (States)": [
-                ["크다", "keu-da", "To be big"], ["작다", "jak-da", "To be small"], ["많다", "man-ta", "To be many/much"],
-                ["적다", "jeok-da", "To be few/little"], ["좋다", "jo-ta", "To be good"], ["나쁘다", "na-ppeu-da", "To be bad"],
-                ["싸다", "ssa-da", "To be cheap"], ["비싸다", "bi-ssa-da", "To be expensive"], ["재미있다", "jae-mi-it-da", "To be interesting"],
-                ["재미없다", "jae-mi-eop-da", "To be uninteresting"], ["어렵다", "eo-ryeop-da", "To be difficult"], ["쉽다", "swip-da", "To be easy"],
-                ["바쁘다", "ba-ppeu-da", "To be busy"], ["한가하다", "han-ga-ha-da", "To be free (time)"], ["덥다", "deop-da", "To be hot"],
-                ["춥다", "chup-da", "To be cold"], ["시원하다", "si-won-ha-da", "To be cool/refreshing"], ["따뜻하다", "tta-tteut-ha-da", "To be warm"],
-                ["빠르다", "ppa-reu-da", "To be fast"], ["느리다", "neuk-ri-da", "To be slow"], ["무겁다", "mu-geop-da", "To be heavy"],
-                ["가볍다", "ga-byeop-da", "To be light"], ["넓다", "neol-da", "To be spacious/wide"], ["좁다", "jop-da", "To be narrow"],
-                ["조용하다", "jo-yong-ha-da", "To be quiet"], ["시끄럽다", "si-kkeu-reop-da", "To be noisy"], ["기쁘다", "gi-ppeu-da", "To be glad"],
-                ["슬프다", "seul-peu-da", "To be sad"], ["피곤하다", "pi-gon-ha-da", "To be tired"], ["아프다", "a-peu-da", "To be sick/painful"]
-            ],
-            "Food & Dining": [
-                ["밥", "bap", "Rice / Meal"], ["김치", "gim-chi", "Kimchi"], ["물", "mul", "Water"],
-                ["고기", "go-gi", "Meat"], ["사과", "sa-gwa", "Apple"], ["바나나", "ba-na-na", "Banana"],
-                ["빵", "ppang", "Bread"], ["우유", "u-yu", "Milk"], ["커피", "keo-pi", "Coffee"],
-                ["차", "cha", "Tea"], ["주스", "ju-seu", "Juice"], ["라면", "ra-myeon", "Ramen"],
-                ["불고기", "bul-go-gi", "Bulgogi"], ["비빔밥", "bi-bim-bap", "Bibimbap"], ["냉면", "naeng-myeon", "Cold noodles"],
-                ["계란", "gye-ran", "Egg"], ["생선", "saeng-seon", "Fish"], ["채소", "chae-so", "Vegetable"],
-                ["과일", "gwa-il", "Fruit"], ["설탕", "seol-tang", "Sugar"], ["소금", "so-geum", "Salt"]
-            ],
-            "Time & Numbers": [
-                ["오늘", "o-neul", "Today"], ["내일", "nae-il", "Tomorrow"], ["어제", "eo-je", "Yesterday"],
-                ["지금", "ji-geum", "Now"], ["요즘", "yo-jeum", "These days"], ["아침", "a-chim", "Morning / Breakfast"],
-                ["점심", "jeom-sim", "Lunch / Afternoon"], ["저녁", "jeo-nyeok", "Evening / Dinner"], ["밤", "bam", "Night"],
-                ["주말", "ju-mal", "Weekend"], ["일주일", "il-ju-il", "One week"], ["한 달", "han-dal", "One month"],
-                ["일년", "il-nyeon", "One year"], ["월요일", "wor-yo-il", "Monday"], ["화요일", "hwa-yo-il", "Tuesday"],
-                ["수요일", "su-yo-il", "Wednesday"], ["목요일", "mong-nyo-il", "Thursday"], ["금요일", "geum-yo-il", "Friday"],
-                ["토요일", "to-yo-il", "Saturday"], ["일요일", "ir-yo-il", "Sunday"], ["하나", "ha-na", "One (Native)"],
-                ["둘", "dul", "Two (Native)"], ["셋", "set", "Three (Native)"], ["일", "il", "One (Sino)"], ["이", "i", "Two (Sino)"]
-            ],
-            "Places & Transportation": [
-                ["학교", "hak-gyo", "School"], ["회사", "hoi-sa", "Company"], ["식당", "sik-dang", "Restaurant"],
-                ["병원", "byeong-won", "Hospital"], ["약국", "yak-guk", "Pharmacy"], ["은행", "eun-haeng", "Bank"],
-                ["공항", "gong-hang", "Airport"], ["역", "yeok", "Station"], ["버스 정류장", "beo-seu jeong-ryu-jang", "Bus stop"],
-                ["지하철", "ji-ha-cheol", "Subway"], ["택시", "taek-si", "Taxi"], ["비행기", "bi-haeng-gi", "Airplane"],
-                ["자전거", "ja-jeon-geo", "Bicycle"], ["도서관", "do-seo-gwan", "Library"], ["박물관", "bang-mul-gwan", "Museum"],
-                ["공원", "gong-won", "Park"], ["백화점", "baek-hwa-jeom", "Department store"], ["시장", "si-jang", "Market"]
-            ],
-            "People & Society": [
-                ["사람", "sa-ram", "Person"], ["친구", "chin-gu", "Friend"], ["가족", "ga-jok", "Family"],
-                ["선생님", "seon-saeng-nim", "Teacher"], ["학생", "hak-saeng", "Student"], ["의사", "ui-sa", "Doctor"],
-                ["경찰", "gyeong-chal", "Police officer"], ["아버지", "a-beo-ji", "Father"], ["어머니", "eo-meo-ni", "Mother"],
-                ["형", "hyeong", "Older brother (male speaker)"], ["누나", "nu-na", "Older sister (male speaker)"],
-                ["오빠", "op-pa", "Older brother (female speaker)"], ["언니", "eon-ni", "Older sister (female speaker)"]
-            ],
-            "Grammar & Connectors": [
-                ["그리고", "geu-ri-go", "And"], ["하지만", "ha-ji-man", "But"], ["그래서", "geu-rae-seo", "So"],
-                ["그러니까", "geu-rae-si-ka", "Therefore"], ["또는", "tto-neun", "Or"], ["아주", "a-ju", "Very"],
-                ["너무", "neo-mu", "Too much"], ["자주", "ja-ju", "Often"], ["가끔", "ga-kkeum", "Sometimes"]
-            ],
-            "Weather & Nature": [
-                ["날씨", "nal-ssi", "Weather"], ["비", "bi", "Rain"], ["눈", "nun", "Snow"],
-                ["바람", "ba-ram", "Wind"], ["구름", "gu-reum", "Cloud"], ["하늘", "ha-neul", "Sky"],
-                ["산", "san", "Mountain"], ["바다", "ba-da", "Sea / Ocean"], ["강", "gang", "River"]
-            ],
-            "Shopping & Hobbies": [
-                ["옷", "ot", "Clothes"], ["신발", "sin-bal", "Shoes"], ["가방", "ga-bang", "Bag"],
-                ["모자", "mo-ja", "Hat / Cap"], ["영화", "yeong-hwa", "Movie"], ["음악", "eum-ak", "Music"],
-                ["운동", "un-dong", "Exercise / Sports"], ["여행", "yeo-haeng", "Travel"], ["사진", "sa-jin", "Photo"]
-            ],
-            "Health & Body": [
-                ["머리", "meo-ri", "Head / Hair"], ["눈", "nun", "Eye"], ["귀", "gwi", "Ear"],
-                ["코", "ko", "Nose"], ["입", "ip", "Mouth"], ["손", "son", "Hand"],
-                ["발", "bal", "Foot"], ["다리", "da-ri", "Leg"], ["몸", "mom", "Body"], ["감기", "gam-gi", "Cold (illness)"]
-            ],
-            "Education & Work": [
-                ["책", "chaek", "Book"], ["공책", "gong-chaek", "Notebook"], ["연필", "yeon-pil", "Pencil"],
-                ["볼펜", "bol-pen", "Ballpoint pen"], ["시험", "si-heom", "Exam / Test"], ["숙제", "suk-je", "Homework"],
-                ["수업", "su-eop", "Class / Lesson"], ["질문", "jil-mun", "Question"]
-            ]
-        };
+            for (let i = 0; i < text.length; i++) {
+                const char = text[i];
+                const next = text[i + 1];
 
-        // Complete building dataset up to 1,020 total words dynamically
-        let globalId = 51;
-        categoriesList.forEach(category => {
-            const baseWords = wordBanks[category] || [];
-            // Expand base entries using prefix/suffix variations to simulate a comprehensive 1000+ TOPIK list
-            for (let round = 0; round < 18; round++) {
-                baseWords.forEach(([kr, rom, en]) => {
-                    let finalKr = kr;
-                    let finalRom = rom;
-                    let finalEn = en;
-
-                    if (round > 0) {
-                        const prefixes = ["기초 ", "생활 ", "한국 ", "자주 쓰는 ", "핵심 ", "중요 "];
-                        const pf = prefixes[round % prefixes.length];
-                        finalKr = `${pf}${kr}`;
-                        finalEn = `${en}`;
+                if (char === '"') {
+                    if (inQuotes && next === '"') {
+                        value += '"';
+                        i++;
+                    } else {
+                        inQuotes = !inQuotes;
                     }
-
-                    vocabDatabase.push({
-                        id: globalId++,
-                        kr: finalKr,
-                        rom: finalRom,
-                        en: finalEn,
-                        cat: category
-                    });
-                });
+                } else if (char === ',' && !inQuotes) {
+                    row.push(value);
+                    value = '';
+                } else if ((char === '\n' || char === '\r') && !inQuotes) {
+                    if (char === '\r' && next === '\n') i++;
+                    row.push(value);
+                    if (row.some(cell => cell.trim() !== '')) rows.push(row);
+                    row = [];
+                    value = '';
+                } else {
+                    value += char;
+                }
             }
-        });
+
+            if (value || row.length) {
+                row.push(value);
+                if (row.some(cell => cell.trim() !== '')) rows.push(row);
+            }
+
+            return rows;
+        }
+
+        async function loadVocabularyData() {
+            let csvText = '';
+
+            try {
+                const response = await fetch('vocab.csv');
+                if (!response.ok) throw new Error('Unable to load vocab.csv');
+                csvText = await response.text();
+            } catch (fetchError) {
+                csvText = await loadVocabularyWithXhr();
+            }
+
+            applyVocabularyCsv(csvText);
+        }
+
+        function loadVocabularyWithXhr() {
+            return new Promise((resolve, reject) => {
+                const request = new XMLHttpRequest();
+                request.open('GET', 'vocab.csv', true);
+                request.overrideMimeType('text/csv; charset=utf-8');
+                request.onload = () => {
+                    if (request.status === 0 || (request.status >= 200 && request.status < 300)) {
+                        resolve(request.responseText);
+                    } else {
+                        reject(new Error('Unable to load vocab.csv'));
+                    }
+                };
+                request.onerror = () => reject(new Error('Unable to load vocab.csv'));
+                request.send();
+            });
+        }
+
+        function applyVocabularyCsv(csvText) {
+            const rows = parseCsv(csvText);
+            const headers = rows.shift();
+            vocabDatabase = rows.map(row => {
+                const item = Object.fromEntries(headers.map((header, index) => [header, row[index] || '']));
+                return {
+                    id: Number(item.id),
+                    kr: item.kr,
+                    rom: item.rom,
+                    en: item.en,
+                    cat: item.cat
+                };
+            }).filter(item => Number.isFinite(item.id));
+
+            categoriesList = [...new Set(vocabDatabase.map(item => item.cat))].filter(cat => cat !== 'Daily Life & House');
+        }
+
+        function finishVocabularyLoad() {
+            syncLearningDbFromSavedProgress();
+            renderCategoryNav();
+            renderVocabList();
+            updateOverallProgress();
+        }
 
         // Application State
         let learnedState = new Set(JSON.parse(localStorage.getItem('topik_1000_learned') || '[]'));
@@ -1736,13 +1648,18 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
         let answerRevealed = false;
 
         // DOM Loaded Init
-        document.addEventListener('DOMContentLoaded', () => {
-            syncLearningDbFromSavedProgress();
-            renderCategoryNav();
-            renderVocabList();
-            updateOverallProgress();
+        document.addEventListener('DOMContentLoaded', async () => {
+            bindAppEvents();
 
-            // Event Listeners
+            try {
+                await loadVocabularyData();
+                finishVocabularyLoad();
+            } catch (error) {
+                showVocabularyLoadError(error);
+            }
+        });
+
+        function bindAppEvents() {
             document.getElementById('search-input').addEventListener('input', () => { currentPage = 1; renderVocabList(); });
             document.getElementById('status-filter').addEventListener('change', () => { currentPage = 1; renderVocabList(); });
             document.getElementById('toggle-roman-btn').addEventListener('click', () => {
@@ -1750,8 +1667,6 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
                 renderVocabList();
             });
             document.getElementById('reset-progress-btn').addEventListener('click', resetProgress);
-            
-            // Pagination Events
             document.getElementById('prev-page-btn').addEventListener('click', () => {
                 if (currentPage > 1) { currentPage--; renderVocabList(); }
             });
@@ -1759,8 +1674,6 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
                 const totalPages = Math.ceil(getFilteredWords().length / pageSize);
                 if (currentPage < totalPages) { currentPage++; renderVocabList(); }
             });
-
-            // Quiz Modal Events
             document.getElementById('start-quiz-btn').addEventListener('click', startQuizDeck);
             document.getElementById('review-learned-btn').addEventListener('click', startLearnedReviewDeck);
             document.getElementById('close-quiz-btn').addEventListener('click', closeQuizModal);
@@ -1775,7 +1688,35 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
             document.getElementById('korean-answer-input').addEventListener('keydown', (event) => {
                 if (event.key === 'Enter') checkKoreanAnswer();
             });
-        });
+        }
+
+        function showVocabularyLoadError(error) {
+            console.error(error);
+            document.getElementById('category-count-badge').textContent = '0 words';
+            document.getElementById('pagination-info').textContent = 'Vocabulary failed to load';
+            document.getElementById('vocab-container').innerHTML = `
+                <div class="bg-red-50 p-6 rounded-xl border border-red-200 text-red-600 text-sm font-semibold space-y-3">
+                    <p>Could not automatically load vocab.csv from this local file.</p>
+                    <p class="text-xs font-medium text-red-500">Choose vocab.csv manually below, or open the page through a local web server.</p>
+                    <input id="local-vocab-file" type="file" accept=".csv,text/csv"
+                        class="block w-full text-xs text-slate-700 file:mr-3 file:py-2 file:px-3 file:rounded-lg file:border-0 file:bg-red-100 file:text-red-700 file:font-bold">
+                </div>
+            `;
+            document.getElementById('local-vocab-file').addEventListener('change', loadVocabularyFromFile);
+        }
+
+        function loadVocabularyFromFile(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = () => {
+                applyVocabularyCsv(reader.result);
+                finishVocabularyLoad();
+            };
+            reader.onerror = () => showVocabularyLoadError(reader.error);
+            reader.readAsText(file, 'utf-8');
+        }
 
         // Filter Logic
         function getFilteredWords() {
@@ -1876,7 +1817,7 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
                                     </button>
                                     <span class="text-[10px] bg-slate-100 text-slate-500 px-2 py-0.5 rounded font-medium">${item.cat}</span>
                                 </div>
-                                ${showRomanization ? `<div class="text-xs text-indigo-500 font-mono">[${item.rom}]</div>` : ''}
+                                ${showRomanization && item.rom ? `<div class="text-xs text-indigo-500 font-mono">[${item.rom}]</div>` : ''}
                                 <div class="text-xs text-slate-600 truncate mt-0.5">${item.en}</div>
                             </div>
                         </div>
@@ -2041,7 +1982,7 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
 
             document.getElementById('quiz-progress').textContent = `Card ${quizIndex + 1} of ${quizDeck.length}`;
             document.getElementById('card-kr').textContent = current.kr;
-            document.getElementById('card-rom').textContent = `[${current.rom}]`;
+            document.getElementById('card-rom').textContent = current.rom ? `[${current.rom}]` : '';
             document.getElementById('card-en').textContent = current.en;
             document.getElementById('card-cat').textContent = current.cat;
             document.getElementById('korean-answer-input').value = '';
@@ -2133,7 +2074,7 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
             answerRevealed = true;
             document.getElementById('korean-answer-input').value = current.kr;
             const feedback = document.getElementById('answer-feedback');
-            feedback.textContent = `Answer: ${current.kr} [${current.rom}]`;
+            feedback.textContent = current.rom ? `Answer: ${current.kr} [${current.rom}]` : `Answer: ${current.kr}`;
             feedback.className = 'min-h-[1.25rem] text-center text-sm font-bold text-indigo-600';
             speakKorean(current.kr);
         }
