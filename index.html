@@ -1471,10 +1471,18 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
                 <span class="text-xs font-bold text-indigo-600 tracking-wider uppercase">TOPIK I Flashcards</span>
             </div>
             <div id="quiz-progress" class="text-xs text-slate-400 font-semibold mb-4">Card 1 of 20</div>
+            <div class="flex w-full gap-2 mb-4 bg-slate-100 p-1 rounded-lg">
+                <button id="mode-korean-btn" class="flex-1 py-2 rounded text-xs font-bold bg-white text-indigo-600 shadow-sm transition">
+                    Korean Card
+                </button>
+                <button id="mode-english-btn" class="flex-1 py-2 rounded text-xs font-bold text-slate-500 hover:text-indigo-600 transition">
+                    English Prompt
+                </button>
+            </div>
 
             <!-- Flashcard Container -->
             <div id="flashcard" class="w-full h-64 bg-slate-800 text-white rounded-2xl p-6 cursor-pointer text-center shadow-lg relative flex flex-col items-center justify-center transition-all hover:scale-[1.01]">
-                <div class="text-[11px] text-indigo-300 uppercase tracking-widest font-semibold absolute top-4">Click to Flip</div>
+                <div id="card-hint" class="text-[11px] text-indigo-300 uppercase tracking-widest font-semibold absolute top-4">Click to Flip</div>
                 
                 <div id="card-content-front" class="space-y-2">
                     <div id="card-kr" class="text-4xl font-extrabold text-white"></div>
@@ -1491,8 +1499,25 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
                 </button>
             </div>
 
+            <div id="typing-panel" class="hidden w-full mt-5 space-y-3">
+                <input id="korean-answer-input" type="text" lang="ko" autocomplete="off" placeholder="Type the Korean word"
+                    class="w-full px-4 py-3 rounded-lg border border-slate-200 text-center text-lg font-bold focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <div id="answer-feedback" class="min-h-[1.25rem] text-center text-sm font-bold"></div>
+                <div class="flex gap-2">
+                    <button id="check-answer-btn" class="flex-1 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs shadow transition flex items-center justify-center gap-1.5">
+                        <i class="fas fa-check"></i> Check Answer
+                    </button>
+                    <button id="reveal-answer-btn" class="flex-1 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs border border-slate-200 transition flex items-center justify-center gap-1.5">
+                        <i class="fas fa-eye"></i> Reveal
+                    </button>
+                    <button id="skip-answer-btn" class="flex-1 py-3 bg-red-50 hover:bg-red-100 text-red-600 font-bold rounded-xl text-xs border border-red-200 transition flex items-center justify-center gap-1.5">
+                        <i class="fas fa-arrow-right"></i> Next
+                    </button>
+                </div>
+            </div>
+
             <!-- Controls -->
-            <div class="flex gap-3 w-full mt-6">
+            <div id="flashcard-controls" class="flex gap-3 w-full mt-6">
                 <button id="quiz-again-btn" class="flex-1 py-3 bg-red-50 hover:bg-red-100 text-red-600 font-bold rounded-xl text-xs border border-red-200 transition flex items-center justify-center gap-1.5">
                     <i class="fas fa-xmark"></i> Need Practice
                 </button>
@@ -1676,8 +1701,8 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
                     if (round > 0) {
                         const prefixes = ["기초 ", "생활 ", "한국 ", "자주 쓰는 ", "핵심 ", "중요 "];
                         const pf = prefixes[round % prefixes.length];
-                        finalKr = `${pf}${kr} (${round+1})`;
-                        finalEn = `${en} [Usage #${round+1}]`;
+                        finalKr = `${pf}${kr}`;
+                        finalEn = `${en}`;
                     }
 
                     vocabDatabase.push({
@@ -1703,6 +1728,8 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
         let quizDeck = [];
         let quizIndex = 0;
         let isCardFlipped = false;
+        let quizMode = 'korean';
+        let answerRevealed = false;
 
         // DOM Loaded Init
         document.addEventListener('DOMContentLoaded', () => {
@@ -1734,6 +1761,14 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
             document.getElementById('flashcard').addEventListener('click', flipCard);
             document.getElementById('quiz-pass-btn').addEventListener('click', handleQuizPass);
             document.getElementById('quiz-again-btn').addEventListener('click', handleQuizAgain);
+            document.getElementById('mode-korean-btn').addEventListener('click', () => setQuizMode('korean'));
+            document.getElementById('mode-english-btn').addEventListener('click', () => setQuizMode('english'));
+            document.getElementById('check-answer-btn').addEventListener('click', checkKoreanAnswer);
+            document.getElementById('reveal-answer-btn').addEventListener('click', revealKoreanAnswer);
+            document.getElementById('skip-answer-btn').addEventListener('click', nextCard);
+            document.getElementById('korean-answer-input').addEventListener('keydown', (event) => {
+                if (event.key === 'Enter') checkKoreanAnswer();
+            });
         });
 
         // Filter Logic
@@ -1925,6 +1960,7 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
             // Shuffle deck
             quizDeck = [...quizDeck].sort(() => Math.random() - 0.5);
             quizIndex = 0;
+            quizMode = 'english';
             document.getElementById('quiz-modal').classList.remove('hidden');
             loadQuizCard();
         }
@@ -1935,6 +1971,7 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
 
         function loadQuizCard() {
             isCardFlipped = false;
+            answerRevealed = false;
             const current = quizDeck[quizIndex];
 
             document.getElementById('quiz-progress').textContent = `Card ${quizIndex + 1} of ${quizDeck.length}`;
@@ -1942,12 +1979,15 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
             document.getElementById('card-rom').textContent = `[${current.rom}]`;
             document.getElementById('card-en').textContent = current.en;
             document.getElementById('card-cat').textContent = current.cat;
+            document.getElementById('korean-answer-input').value = '';
+            document.getElementById('answer-feedback').textContent = '';
+            document.getElementById('answer-feedback').className = 'min-h-[1.25rem] text-center text-sm font-bold';
 
-            document.getElementById('card-content-front').classList.remove('hidden');
-            document.getElementById('card-content-back').classList.add('hidden');
+            renderQuizMode();
         }
 
         function flipCard() {
+            if (quizMode === 'english') return;
             isCardFlipped = !isCardFlipped;
             const front = document.getElementById('card-content-front');
             const back = document.getElementById('card-content-back');
@@ -1959,6 +1999,83 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
                 front.classList.remove('hidden');
                 back.classList.add('hidden');
             }
+        }
+
+        function setQuizMode(mode) {
+            quizMode = mode;
+            if (quizDeck.length > 0) loadQuizCard();
+        }
+
+        function renderQuizMode() {
+            const koreanMode = quizMode === 'korean';
+            const koreanBtn = document.getElementById('mode-korean-btn');
+            const englishBtn = document.getElementById('mode-english-btn');
+
+            koreanBtn.className = `flex-1 py-2 rounded text-xs font-bold transition ${koreanMode ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-500 hover:text-indigo-600'}`;
+            englishBtn.className = `flex-1 py-2 rounded text-xs font-bold transition ${!koreanMode ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-500 hover:text-indigo-600'}`;
+
+            document.getElementById('typing-panel').classList.toggle('hidden', koreanMode);
+            document.getElementById('flashcard-controls').classList.toggle('hidden', !koreanMode);
+            document.getElementById('flashcard').classList.toggle('cursor-pointer', koreanMode);
+            document.getElementById('card-hint').textContent = koreanMode ? 'Click to Flip' : 'Type the Korean Word';
+
+            if (koreanMode) {
+                document.getElementById('card-content-front').classList.remove('hidden');
+                document.getElementById('card-content-back').classList.add('hidden');
+            } else {
+                document.getElementById('card-content-front').classList.add('hidden');
+                document.getElementById('card-content-back').classList.remove('hidden');
+                setTimeout(() => document.getElementById('korean-answer-input').focus(), 0);
+            }
+        }
+
+        function normalizeKoreanAnswer(value) {
+            return value.trim().replace(/\s+/g, '');
+        }
+
+        function checkKoreanAnswer() {
+            if (quizMode !== 'english' || quizDeck.length === 0) return;
+            const current = quizDeck[quizIndex];
+            const input = document.getElementById('korean-answer-input');
+            const feedback = document.getElementById('answer-feedback');
+            const answer = normalizeKoreanAnswer(input.value);
+            const expected = normalizeKoreanAnswer(current.kr);
+
+            if (!answer) {
+                feedback.textContent = 'Type your answer first.';
+                feedback.className = 'min-h-[1.25rem] text-center text-sm font-bold text-slate-500';
+                return;
+            }
+
+            if (answer === expected && !answerRevealed) {
+                feedback.textContent = 'Correct. Marked as mastered.';
+                feedback.className = 'min-h-[1.25rem] text-center text-sm font-bold text-emerald-600';
+                if (!learnedState.has(current.id)) {
+                    learnedState.add(current.id);
+                    localStorage.setItem('topik_1000_learned', JSON.stringify([...learnedState]));
+                    updateOverallProgress();
+                    renderVocabList();
+                }
+                setTimeout(nextCard, 700);
+            } else if (answer === expected) {
+                feedback.textContent = 'Answer revealed. Move to the next word when ready.';
+                feedback.className = 'min-h-[1.25rem] text-center text-sm font-bold text-indigo-600';
+            } else {
+                feedback.textContent = 'Not quite. Try again or reveal the answer.';
+                feedback.className = 'min-h-[1.25rem] text-center text-sm font-bold text-red-600';
+                input.select();
+            }
+        }
+
+        function revealKoreanAnswer() {
+            if (quizDeck.length === 0) return;
+            const current = quizDeck[quizIndex];
+            answerRevealed = true;
+            document.getElementById('korean-answer-input').value = current.kr;
+            const feedback = document.getElementById('answer-feedback');
+            feedback.textContent = `Answer: ${current.kr} [${current.rom}]`;
+            feedback.className = 'min-h-[1.25rem] text-center text-sm font-bold text-indigo-600';
+            speakKorean(current.kr);
         }
 
         function handleQuizPass() {
