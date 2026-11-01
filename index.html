@@ -2054,10 +2054,10 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
             }
 
             if (answer === expected && !answerRevealed) {
-                feedback.textContent = 'Correct. Marked as mastered.';
+                feedback.textContent = 'Correct. Marked as mastered. Click Next when ready.';
                 feedback.className = 'min-h-[1.25rem] text-center text-sm font-bold text-emerald-600';
                 markWordLearned(current, learnedState.has(current.id) ? 'review' : 'typed');
-                setTimeout(nextCard, 700);
+                input.blur();
             } else if (answer === expected) {
                 feedback.textContent = 'Answer revealed. Move to the next word when ready.';
                 feedback.className = 'min-h-[1.25rem] text-center text-sm font-bold text-indigo-600';
