@@ -1,8 +1,15 @@
 <html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4f46e5">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="TOPIK Vocab">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <title>TOPIK I Master Vocabulary (1,000+ Words)</title>
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -935,6 +942,7 @@
         // DOM Loaded Init
         document.addEventListener('DOMContentLoaded', async () => {
             bindAppEvents();
+            registerServiceWorker();
 
             try {
                 await loadVocabularyData();
@@ -943,6 +951,15 @@
                 showVocabularyLoadError(error);
             }
         });
+
+        function registerServiceWorker() {
+            const isSecureOrigin = location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+            if (!('serviceWorker' in navigator) || !isSecureOrigin) return;
+
+            navigator.serviceWorker.register('./service-worker.js').catch(error => {
+                console.warn('Service worker registration failed:', error);
+            });
+        }
 
         function bindAppEvents() {
             document.getElementById('search-input').addEventListener('input', () => { currentPage = 1; renderVocabList(); });

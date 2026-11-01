@@ -12,7 +12,7 @@
   <rect width="64" height="64" rx="14" fill="url(#bg)"/>
   <path d="M18 14h24c3.3 0 6 2.7 6 6v28c0 3.3-2.7 6-6 6H18c-3.3 0-6-2.7-6-6V20c0-3.3 2.7-6 6-6Z" fill="url(#card)"/>
   <path d="M24 20h18" stroke="#c7d2fe" stroke-width="3" stroke-linecap="round"/>
-  <text x="30" y="41" text-anchor="middle" font-family="Arial, 'Apple SD Gothic Neo', sans-serif" font-size="22" font-weight="800" fill="#312e81">가</text>
+  <text x="30" y="42" text-anchor="middle" font-family="Arial, 'Apple SD Gothic Neo', sans-serif" font-size="21" font-weight="800" fill="#312e81">한</text>
   <circle cx="47" cy="46" r="12" fill="#10b981"/>
   <path d="m41.5 46.2 3.5 3.5 7.4-8" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
